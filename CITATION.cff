@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the ICPM 2026 paper below."
+title: "language-mass-precision: Language-Mass Precision for process mining"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/sbarbonjr/language-mass-precision"
+authors:
+  - family-names: Ceravolo
+    given-names: Paolo
+    affiliation: "University of Milan"
+  - family-names: Maghool
+    given-names: Samira
+    affiliation: "Pegaso University"
+  - family-names: "Barbon Junior"
+    given-names: Sylvio
+    affiliation: "University of Trieste"
+keywords: [process mining, precision, conformance checking, pm4py]
+preferred-citation:
+  type: conference-paper
+  title: "Language-Mass Precision: A Measure-Theoretic View of Finite Logs and Infinite Model Languages"
+  authors:
+    - family-names: Ceravolo
+      given-names: Paolo
+    - family-names: Maghool
+      given-names: Samira
+    - family-names: "Barbon Junior"
+      given-names: Sylvio
+  collection-title: "Proceedings of the International Conference on Process Mining (ICPM 2026)"
+  year: 2026

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="t d">
+  <title id="t">How LMP is computed</title>
+  <desc id="d">A model is compiled into an epsilon-NFA over reachable markings and determinized into a DFA. The denominator is then a finite sum, a sparse linear solve, or a certified interval; exceeding state or time limits yields an incomplete result.</desc>
+  <style>
+    .sans { font-family: -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    .box { fill:#ffffff; stroke:#c3cad8; stroke-width:1.5; }
+    .ink { fill:#14213d; } .muted { fill:#5b6478; }
+    .flow { stroke:#8a94a8; stroke-width:2; fill:none; } .ah { fill:#8a94a8; }
+    .ex { fill:#e6f4ea; stroke:#2e8b57; stroke-width:1.5; } .ex-t { fill:#1f6b41; }
+    .iv { fill:#e8effc; stroke:#2f6fde; stroke-width:1.5; } .iv-t { fill:#1f4fae; }
+    .ic { fill:#fbeee6; stroke:#c25e14; stroke-width:1.5; } .ic-t { fill:#9a4a0f; }
+    .bg { fill:#f7f8fb; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill:#0f1626; }
+      .box { fill:#18223a; stroke:#3a4763; } .ink { fill:#e8ecf5; } .muted { fill:#9aa4ba; }
+      .flow { stroke:#6b7690; } .ah { fill:#6b7690; }
+      .ex { fill:#14301f; stroke:#4fbf7f; } .ex-t { fill:#8fe0b0; }
+      .iv { fill:#162544; stroke:#6ea2ff; } .iv-t { fill:#a9c6ff; }
+      .ic { fill:#33210f; stroke:#f2a05c; } .ic-t { fill:#f7c493; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+  </defs>
+  <rect width="1200" height="330" rx="18" class="bg"/>
+
+  <g class="sans">
+    <!-- inputs -->
+    <rect x="30" y="112" width="190" height="96" rx="12" class="box"/>
+    <text x="125" y="146" text-anchor="middle" font-size="16" font-weight="700" class="ink">Process model</text>
+    <text x="125" y="170" text-anchor="middle" font-size="13" class="muted">Petri net · process tree</text>
+    <text x="125" y="188" text-anchor="middle" font-size="13" class="muted">BPMN</text>
+
+    <path d="M220 160 L268 160" class="flow" marker-end="url(#a)"/>
+
+    <rect x="272" y="112" width="200" height="96" rx="12" class="box"/>
+    <text x="372" y="146" text-anchor="middle" font-size="16" font-weight="700" class="ink">ε-NFA</text>
+    <text x="372" y="170" text-anchor="middle" font-size="13" class="muted">reachable markings;</text>
+    <text x="372" y="188" text-anchor="middle" font-size="13" class="muted">silent moves = ε-edges</text>
+
+    <path d="M472 160 L520 160" class="flow" marker-end="url(#a)"/>
+
+    <rect x="524" y="112" width="200" height="96" rx="12" class="box"/>
+    <text x="624" y="146" text-anchor="middle" font-size="16" font-weight="700" class="ink">DFA</text>
+    <text x="624" y="170" text-anchor="middle" font-size="13" class="muted">subset construction,</text>
+    <text x="624" y="188" text-anchor="middle" font-size="13" class="muted">compiled once, reusable</text>
+
+    <!-- log input -->
+    <rect x="524" y="24" width="200" height="54" rx="12" class="box"/>
+    <text x="624" y="47" text-anchor="middle" font-size="14" font-weight="700" class="ink">Event log variants</text>
+    <text x="624" y="66" text-anchor="middle" font-size="12" class="muted">numerator: membership tests</text>
+    <path d="M624 78 L624 108" class="flow" marker-end="url(#a)"/>
+
+    <!-- branches -->
+    <path d="M724 160 C 760 160, 760 52, 796 52" class="flow" marker-end="url(#a)"/>
+    <path d="M724 160 C 760 160, 760 128, 796 128" class="flow" marker-end="url(#a)"/>
+    <path d="M724 160 C 760 160, 760 204, 796 204" class="flow" marker-end="url(#a)"/>
+    <path d="M624 208 C 624 280, 700 280, 796 280" class="flow" marker-end="url(#a)"/>
+
+    <rect x="800" y="24" width="370" height="56" rx="12" class="ex"/>
+    <text x="818" y="48" font-size="14" font-weight="700" class="ex-t">EXACT · finite sum</text>
+    <text x="818" y="67" font-size="12.5" class="ex-t">acyclic productive DFA (finite language), any prior</text>
+
+    <rect x="800" y="100" width="370" height="56" rx="12" class="ex"/>
+    <text x="818" y="124" font-size="14" font-weight="700" class="ex-t">EXACT · sparse solve</text>
+    <text x="818" y="143" font-size="12.5" class="ex-t">geometric prior: x = (1−λ) f + λ A x, infinite languages</text>
+
+    <rect x="800" y="176" width="370" height="56" rx="12" class="iv"/>
+    <text x="818" y="200" font-size="14" font-weight="700" class="iv-t">INTERVAL · certified bounds</text>
+    <text x="818" y="219" font-size="12.5" class="iv-t">cyclic DFA, e.g. power law: D_K ≤ D ≤ D_K + live-mass tail</text>
+
+    <rect x="800" y="252" width="370" height="56" rx="12" class="ic"/>
+    <text x="818" y="276" font-size="14" font-weight="700" class="ic-t">INCOMPLETE · limits reached</text>
+    <text x="818" y="295" font-size="12.5" class="ic-t">state or time limit hit; no partial automaton is used</text>
+  </g>
+</svg>

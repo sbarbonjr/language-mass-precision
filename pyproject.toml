@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "language-mass-precision"
+dynamic = ["version"]
+description = "Language-Mass Precision (LMP): a measure-theoretic precision for process models and event logs, PM4Py-compatible."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+authors = [
+  { name = "Paolo Ceravolo", email = "paolo.ceravolo@unimi.it" },
+  { name = "Samira Maghool" },
+  { name = "Sylvio Barbon Junior", email = "sylvio.barbonjunior@units.it" },
+]
+keywords = ["process mining", "conformance checking", "precision", "pm4py", "formal languages", "event logs"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "pm4py>=2.7",
+  "numpy>=1.21",
+  "scipy>=1.8",
+  "pandas>=1.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4", "scikit-learn>=1.2"]
+tutorials = ["jupyter", "matplotlib>=3.5", "scikit-learn>=1.2"]
+
+[project.urls]
+Homepage = "https://github.com/sbarbonjr/language-mass-precision"
+Issues = "https://github.com/sbarbonjr/language-mass-precision/issues"
+"Controlled evaluation" = "https://github.com/paoloceravolo/lmp-controlled-evaluation"
+
+[tool.hatch.version]
+path = "src/language_mass_precision/meta.py"
+pattern = 'VERSION = "(?P<version>[^"]+)"'
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/language_mass_precision"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CITATION.cff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

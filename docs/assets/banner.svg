@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Language-Mass Precision</title>
+  <desc id="desc">LMP equals the prior mass of observed model behaviour divided by the prior mass of the whole model language.</desc>
+  <style>
+    .sans { font-family: -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    .math { font-family: "STIX Two Math", "Cambria Math", Georgia, "Times New Roman", serif; font-style: italic; }
+    .edge, .edge-on { stroke-width: 2.2; fill: none; } .state { stroke-width: 2; } .lbl { font-size: 15px; }
+    .ink { fill:#14213d; } .muted { fill:#5b6478; } .acc { fill:#2f6fde; } .acc2 { fill:#c25e14; }
+    .bg1 { stop-color:#f7f8fb; } .bg2 { stop-color:#eef1f7; }
+    .edge { stroke:#b7bfd0; } .edge-on { stroke:#2f6fde; } .ah { fill:#b7bfd0; } .ah-on { fill:#2f6fde; }
+    .state { fill:#f7f8fb; stroke:#14213d; } .rule { stroke:#14213d; }
+    .pill { fill:#2f6fde; } .barbg { fill:#dde2ec; } .bar { fill:#2f6fde; }
+    @media (prefers-color-scheme: dark) {
+    .ink { fill:#e8ecf5; } .muted { fill:#9aa4ba; } .acc { fill:#6ea2ff; } .acc2 { fill:#f2a05c; }
+    .bg1 { stop-color:#0f1626; } .bg2 { stop-color:#141d31; }
+    .edge { stroke:#46536f; } .edge-on { stroke:#6ea2ff; } .ah { fill:#46536f; } .ah-on { fill:#6ea2ff; }
+    .state { fill:#0f1626; stroke:#e8ecf5; } .rule { stroke:#e8ecf5; }
+    .pill { fill:#6ea2ff; } .barbg { fill:#26314a; } .bar { fill:#6ea2ff; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" class="bg1"/>
+      <stop offset="1" class="bg2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="ah"/>
+    </marker>
+    <marker id="arrow-on" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="ah-on"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="340" rx="22" fill="url(#bg)"/>
+
+  <!-- left: text -->
+  <g class="sans">
+    <rect x="54" y="48" width="224" height="28" rx="14" class="pill" opacity="0.14"/>
+    <text x="166" y="67" text-anchor="middle" font-size="14" font-weight="600" letter-spacing="0.6" class="acc">ICPM 2026 · MAIN TRACK</text>
+    <text x="60" y="132" font-size="46" font-weight="700" class="ink" letter-spacing="-0.5">Language-Mass Precision</text>
+    <text x="60" y="166" font-size="19" class="muted">Precision for process models, from finite logs to infinite languages</text>
+  </g>
+
+  <!-- formula -->
+  <g class="math ink">
+    <text x="60" y="262" font-size="34" font-style="normal" font-family="Georgia, serif">LMP</text>
+    <text x="133" y="272" font-size="22">μ</text>
+    <text x="150" y="262" font-size="34">(L, M)</text>
+    <text x="254" y="262" font-size="34" font-style="normal">=</text>
+    <!-- numerator -->
+    <text x="292" y="240" font-size="28">μ(</text>
+    <text x="324" y="240" font-size="28" class="acc">L</text>
+    <text x="325" y="219" font-size="24" class="acc" font-style="normal">~</text>
+    <text x="349" y="240" font-size="28" font-style="normal">∩</text>
+    <text x="377" y="240" font-size="28">ℒ</text>
+    <text x="397" y="240" font-size="28">(M))</text>
+    <line x1="290" y1="252" x2="462" y2="252" class="rule" stroke-width="2"/>
+    <!-- denominator -->
+    <text x="322" y="290" font-size="28">μ(</text>
+    <text x="354" y="290" font-size="28">ℒ</text>
+    <text x="374" y="290" font-size="28">(M))</text>
+  </g>
+  <g class="sans muted" font-size="14">
+    <text x="494" y="236">observed variants the model accepts</text>
+    <text x="494" y="286">all behaviour the model accepts</text>
+  </g>
+
+  <!-- right: DFA with a loop -->
+  <g transform="translate(872,72) scale(0.92)">
+    <path class="edge-on" d="M -48 78 L -22 78" marker-end="url(#arrow-on)"/>
+    <circle class="state" cx="0" cy="78" r="20"/>
+    <circle class="state" cx="120" cy="78" r="20"/>
+    <circle class="state" cx="240" cy="78" r="20"/>
+    <circle class="state" cx="240" cy="78" r="14"/>
+    <path class="edge-on" d="M 21 78 L 97 78" marker-end="url(#arrow-on)"/>
+    <path class="edge-on" d="M 141 78 L 217 78" marker-end="url(#arrow-on)"/>
+    <path class="edge" d="M 106 62 C 96 18, 146 18, 134 62" marker-end="url(#arrow)"/>
+    <path class="edge" d="M 136 94 C 160 140, 210 130, 228 96" marker-end="url(#arrow)"/>
+    <g class="math lbl">
+      <text x="56" y="70" class="acc">a</text>
+      <text x="176" y="70" class="acc">c</text>
+      <text x="114" y="22" class="muted">b</text>
+      <text x="184" y="140" class="muted">d</text>
+    </g>
+
+    <!-- mass bar -->
+    <g class="sans" font-size="13">
+      <rect x="-40" y="186" width="300" height="22" rx="6" class="barbg"/>
+      <rect x="-40" y="186" width="186" height="22" rx="6" class="bar"/>
+      <text x="-40" y="230" class="muted">μ(ℒ(M)) — model-language mass</text>
+      <text x="-40" y="178" class="acc" font-weight="600">observed share = LMP</text>
+      <text x="260" y="178" class="acc2" text-anchor="end">unseen: b-loops, d</text>
+    </g>
+  </g>
+</svg>
