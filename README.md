@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#citation"><img alt="ICPM 2026 main track" src="https://img.shields.io/badge/ICPM%202026-main%20track-2f6fde"></a>
   <a href="https://github.com/sbarbonjr/language-mass-precision/actions/workflows/tests.yml"><img alt="tests" src="https://github.com/sbarbonjr/language-mass-precision/actions/workflows/tests.yml/badge.svg"></a>
-  <img alt="Python" src="https://img.shields.io/badge/python-3.9%E2%80%933.12-3776ab">
+  <img alt="Python" src="https://img.shields.io/badge/python-3.10%E2%80%933.13-3776ab">
   <a href="https://pm4py.fit.fraunhofer.de/"><img alt="PM4Py" src="https://img.shields.io/badge/PM4Py-%E2%89%A52.7-f08c00"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-4c9a2a"></a>
 </p>
@@ -58,7 +58,7 @@ cd language-mass-precision
 pip install -e ".[dev,tutorials]"
 ```
 
-Requires Python ≥ 3.9 and PM4Py ≥ 2.7.
+Requires Python ≥ 3.10 and PM4Py ≥ 2.7.
 
 ## Quickstart
 

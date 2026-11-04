@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "Language-Mass Precision (LMP): a measure-theoretic precision for process models and event logs, PM4Py-compatible."
 readme = "README.md"
 license = "Apache-2.0"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
   { name = "Paolo Ceravolo", email = "paolo.ceravolo@unimi.it" },
   { name = "Samira Maghool" },
@@ -56,7 +56,7 @@ filterwarnings = ["ignore::DeprecationWarning"]
 
 [tool.ruff]
 line-length = 120
-target-version = "py39"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

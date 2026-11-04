@@ -11,7 +11,7 @@ PRIORS = ["geometric", "power_law"]
 
 def scores(toy, log=None, **kwargs):
     frame = lmp.rank_models(log if log is not None else toy.log, toy.models, **kwargs)
-    return dict(zip(frame["model"], frame["lower"]))
+    return dict(zip(frame["model"], frame["lower"], strict=True))
 
 
 @pytest.mark.parametrize("prior", PRIORS)
