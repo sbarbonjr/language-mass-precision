@@ -32,7 +32,7 @@ $\tilde L$ is the set of distinct log variants, $\mathcal L(M)$ the model langua
 The library plugs into PM4Py. It takes PM4Py logs and models, follows PM4Py's `algorithm.apply(..., variant=, parameters=)` convention, and also offers a scikit-learn style estimator for prior sweeps and model ranking.
 
 > [!NOTE]
-> **News · Nov 2026.** *Language-Mass Precision: A Measure-Theoretic View of Finite Logs and Infinite Model Languages* has been accepted at the **ICPM 2026 main track**.
+> **News · Nov 2026.** *Language-Mass Precision: A Measure-Theoretic View of Finite Logs and Infinite Model Languages* has been accepted at the **ICPM 2027 main track**.
 
 ## Highlights
 
