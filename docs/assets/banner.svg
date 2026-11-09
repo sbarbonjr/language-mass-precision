@@ -36,7 +36,7 @@
   <!-- left: text -->
   <g class="sans">
     <rect x="54" y="48" width="224" height="28" rx="14" class="pill" opacity="0.14"/>
-    <text x="166" y="67" text-anchor="middle" font-size="14" font-weight="600" letter-spacing="0.6" class="acc">ICPM 2026 · MAIN TRACK</text>
+    <text x="166" y="67" text-anchor="middle" font-size="14" font-weight="600" letter-spacing="0.6" class="acc">ICPM 2027 · MAIN TRACK</text>
     <text x="60" y="132" font-size="46" font-weight="700" class="ink" letter-spacing="-0.5">Language-Mass Precision</text>
     <text x="60" y="166" font-size="19" class="muted">Precision for process models, from finite logs to infinite languages</text>
   </g>
