@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="#citation"><img alt="ICPM 2026 main track" src="https://img.shields.io/badge/ICPM%202026-main%20track-2f6fde"></a>
+  <a href="#citation"><img alt="ICPM 2027 main track" src="https://img.shields.io/badge/ICPM%202026-main%20track-2f6fde"></a>
   <a href="https://github.com/sbarbonjr/language-mass-precision/actions/workflows/tests.yml"><img alt="tests" src="https://github.com/sbarbonjr/language-mass-precision/actions/workflows/tests.yml/badge.svg"></a>
   <img alt="Python" src="https://img.shields.io/badge/python-3.10%E2%80%933.13-3776ab">
   <a href="https://pm4py.fit.fraunhofer.de/"><img alt="PM4Py" src="https://img.shields.io/badge/PM4Py-%E2%89%A52.7-f08c00"></a>
@@ -280,11 +280,11 @@ The controlled evaluation and the real-log experiments of the ICPM paper are arc
 If you use LMP, please cite:
 
 ```bibtex
-@inproceedings{ceravolo2026lmp,
+@inproceedings{ceravolo2027lmp,
   title     = {Language-Mass Precision: A Measure-Theoretic View of Finite Logs and Infinite Model Languages},
   author    = {Ceravolo, Paolo and Maghool, Samira and Barbon Junior, Sylvio},
   booktitle = {Proceedings of the International Conference on Process Mining (ICPM 2026)},
-  year      = {2026}
+  year      = {2027}
 }
 ```
 
