@@ -220,6 +220,7 @@ Executed notebooks with outputs are in [`tutorials/`](tutorials/):
 | [04 · Infinite languages](tutorials/04_infinite_languages_and_certification.ipynb) | loops, exact vs certified vs incomplete, exact vs bounded playout (truncation error and cost) |
 | [05 · Imprecision attribution](tutorials/05_imprecision_attribution.ipynb) | which unseen traces make a model imprecise |
 | [06 · Discovery workflow](tutorials/06_pm4py_discovery_workflow.ipynb) | discovery with PM4Py, LMP against token/alignment precision, explaining disagreements |
+| [07 · Precision axioms vs PM4Py](tutorials/07_precision_axioms_vs_pm4py.ipynb) | a witness for each of the five Tax et al. axioms, tested on LMP and on PM4Py's token, alignment and footprint precision; scorecard and a randomised check of the proof |
 
 Standalone scripts are in [`examples/`](examples/): `quickstart.py`, `prior_sweep.py` and `rank_discovered_models.py <log.xes>`.
 
