@@ -12,4 +12,4 @@ First release of the library, extracted from the ICPM 2026 evaluation pipeline.
 - Bounded-playout baseline (`method="playout"`).
 - Trace-level imprecision attribution by best-first DFA search, valid on infinite languages.
 - PM4Py-style `algorithm.apply` with `Variants`/`Parameters`; scikit-learn style `LanguageMassPrecision`.
-- Toy datasets from the paper's controlled evaluation; six executed tutorials.
+- Toy datasets from the paper's controlled evaluation; seven executed tutorials.
